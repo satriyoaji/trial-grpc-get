@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "simple-grpc-trial/student";
+package student;
+
+service DataStudent {
+  rpc FindStudentByEmail(Student) returns (Student);
+}
+
+message Student {
+  string name = 1;
+  int32 age = 2;
+  string email = 3;
+}
